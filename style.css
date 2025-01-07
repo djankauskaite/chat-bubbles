@@ -7,7 +7,7 @@
 
 section {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     gap: 30px;
     max-width: 600px;
@@ -19,6 +19,9 @@ section img {
     width: 100px; 
     height: 100px;
     border-radius: 100px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
 }
 
 section p {
@@ -29,6 +32,7 @@ section p {
     font-size: 14px;
     line-height: 20px;
     position: relative;
+    max-width: calc(100% - 100px);
 }
 
 section p::before {
@@ -42,3 +46,19 @@ section p::before {
     left: -25px; 
     bottom: 0;
 }
+
+.section-2 {
+    flex-direction: row-reverse;
+}
+
+.section-2 p {
+    background: #3bc06f;
+    color: white; 
+}
+
+.section-2 p::before {
+    left: 99%;
+    border-color: transparent;
+    border-left-color: #3bc06f;
+}
+
